@@ -15,6 +15,7 @@
 - Typography
 - Links
 - Buttons
+- Banner
 - Forms
 - Lists
 - Code
@@ -229,6 +230,9 @@ input[type="button"].button-primary:focus {
 
 /* Banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.banner {
+width:100%;
+}
 .banner-text {
   position: absolute; /* Position text relative to the banner */
   top: 50%; /* Center vertically */
