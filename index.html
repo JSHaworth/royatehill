@@ -53,7 +53,171 @@
         <section id="updates">
             <h2>Sign up for updates</h2>
             <p>
-                [Form or information about signing up for updates would go here. For example:]
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for Updates</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        label.required::after {
+            content: " *";
+            color: red;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-green-100 to-yellow-100 p-6 rounded-lg">
+    <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-semibold text-green-600 mb-4 text-center">Sign Up for Updates</h2>
+        <p class="text-gray-700 mb-6 text-center">Help us improve our community garden. We will never share your data with third parties.</p>
+
+        <form id="signup-form" class="space-y-4">
+            <div>
+                <label for="name" class="block text-gray-700 text-sm font-bold mb-2 required">Name</label>
+                <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div>
+                <label for="surname" class="block text-gray-700 text-sm font-bold mb-2 required">Surname</label>
+                <input type="text" id="surname" name="surname" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div>
+                <label for="email" class="block text-gray-700 text-sm font-bold mb-2 required">Email</label>
+                <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div>
+                <label for="mobile" class="block text-gray-700 text-sm font-bold mb-2">Mobile (Optional)</label>
+                <input type="tel" id="mobile" name="mobile" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div>
+                <label for="role" class="block text-gray-700 text-sm font-bold mb-2 required">I am</label>
+                <select id="role" name="role" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="plotholder">a Plotholder</option>
+                    <option value="cotenant">a Co-tenant/coworker</option>
+                    <option value="orchardvolunteer">a Community orchard volunteer</option>
+                    <option value="naturereservevolunteer">a Royate Hill nature reserve volunteer</option>
+                    <option value="localresident">a Local Resident</option>
+                </select>
+            </div>
+
+            <fieldset class="border rounded-md p-4">
+                <legend class="text-sm font-semibold text-gray-700">I am interested in:</legend>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <input type="checkbox" id="skips" name="interests[]" value="Joint hire of skips" class="mr-2">
+                        <label for="skips" class="text-gray-700 text-sm font-medium">Joint hire of skips</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="social" name="interests[]" value="Social events" class="mr-2">
+                        <label for="social" class="text-gray-700 text-sm font-medium">Social events</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="workshops" name="interests[]" value="Gardening workshops" class="mr-2">
+                        <label for="workshops" class="text-gray-700 text-sm font-medium">Gardening workshops</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="maintenance" name="interests[]" value="Community maintenance days" class="mr-2">
+                        <label for="maintenance" class="text-gray-700 text-sm font-medium">Community maintenance days</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="orchard" name="interests[]" value="Volunteering at the community orchard" class="mr-2">
+                        <label for="orchard" class="text-gray-700 text-sm font-medium">Volunteering at the community orchard</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="sharedplot" name="interests[]" value="Volunteering on a shared plot" class="mr-2">
+                        <label for="sharedplot" class="text-gray-700 text-sm font-medium">Volunteering on a shared plot</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="waitinglist" name="interests[]" value="I am on the waiting list" class="mr-2">
+                        <label for="waitinglist" class="text-gray-700 text-sm font-medium">I am on the waiting list</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="herbgarden" name="interests[]" value="The herb garden" class="mr-2">
+                        <label for="herbgarden" class="text-gray-700 text-sm font-medium">The herb garden</label>
+                    </div>
+                     <div>
+                        <input type="checkbox" id="treepruning" name="interests[]" value="Tree pruning workshops" class="mr-2">
+                        <label for="treepruning" class="text-gray-700 text-sm font-medium">Tree pruning workshops</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="cidermaking" name="interests[]" value="Cider making" class="mr-2">
+                        <label for="cidermaking" class="text-gray-700 text-sm font-medium">Cider making</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="beekeeping" name="interests[]" value="Beekeeping" class="mr-2">
+                        <label for="beekeeping" class="text-gray-700 text-sm font-medium">Beekeeping</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                Submit
+            </button>
+        </form>
+
+        <div id="message" class="mt-6 text-center font-semibold text-green-600"></div>
+    </div>
+
+    <script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(this);
+        let data = {};
+        formData.forEach((value, key) => {
+            if (key === 'interests[]') {
+                if (!data[key]) {
+                    data[key] = [];
+                }
+                data[key].push(value);
+            } else {
+                data[key] = value;
+            }
+        });
+
+        // Use a service like EmailJS (https://www.emailjs.com/) to send the email.  This is the *correct* and secure way to send emails from a website.  Directly using mailto: links is unreliable and can expose the user's email client.
+        // 1.  Sign up for a free EmailJS account.
+        // 2.  Create a service (e.g., Gmail).
+        // 3.  Create an email template.
+        // 4.  Get your Service ID, Template ID, and Public Key.
+        // 5.  Add the EmailJS CDN to your HTML:
+        //    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        // 6.  Initialize EmailJS in your JavaScript:
+        //    emailjs.init('YOUR_PUBLIC_KEY');
+        // 7.  Use the emailjs.send() function to send the email.
+
+        // IMPORTANT: Replace these with your actual EmailJS credentials!
+        const serviceId = 'YOUR_SERVICE_ID';  //  Replace with your Service ID
+        const templateId = 'YOUR_TEMPLATE_ID';    //  Replace with your Template ID
+        const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your Public Key
+
+        emailjs.init(publicKey); // Initialize EmailJS
+
+        emailjs.send(serviceId, templateId, data)  // Send the email
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                document.getElementById('message').textContent = 'Thank you for signing up!';
+                document.getElementById('signup-form').reset(); // Clear the form
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                document.getElementById('message').textContent = 'Sorry, there was an error. Please try again later.';
+            });
+
+        //  Simulate a successful submission (for testing without EmailJS) - Remove this when you add EmailJS
+        // console.log(data);  //  See the data in the console
+        // document.getElementById('message').textContent = 'Thank you for signing up!';
+        // document.getElementById('signup-form').reset();
+    });
+    </script>
+
                 To receive the latest news and information about Coombe Brook Valley Allotments, please send an email to <a href="mailto:coombebrookvalley@gmail.com">coombebrookvalley@gmail.com</a>.
             </p>
         </section>
