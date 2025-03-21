@@ -230,13 +230,18 @@ input[type="button"].button-primary:focus {
 
 /* Banner
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.banner {
-  width: 100vw; /* Use viewport width */
+banner {
+  width: 100vw; /* Full viewport width */
   height: 400px;
-  object-fit: cover;
   position: relative;
-  margin: 0; /* Remove any default margins */
-  padding: 0; /* Remove any default padding */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.banner img {
+  width: 100%; /* Image fills banner width */
+  height: 100%; /* Image fills banner height */
+  object-fit: cover; /* Maintain aspect ratio and cover */
+  display: block; /* Remove potential inline spacing */
 }
 
 .banner::before {
