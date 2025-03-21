@@ -232,7 +232,7 @@ input[type="button"].button-primary:focus {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 banner {
   width: 100vw; /* Full viewport width */
-  height: 400px;
+  max-height: 400px;
   position: relative;
   overflow: hidden; /* Prevent overflow */
 }
