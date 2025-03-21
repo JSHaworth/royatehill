@@ -26,6 +26,10 @@
 */
 
 
+
+
+
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .container {
@@ -161,6 +165,37 @@ a {
   color: #1EAEDB; }
 a:hover {
   color: #0FA0CE; }
+
+/* Banners
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.banner {
+  width: 100%; /* Make the image span the full width */
+  height: 400px; /* Cap the height at 400px */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  position: relative; /* Needed for absolute positioning of text */
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Add a semi-transparent black overlay for better text readability */
+}
+
+.banner-text {
+  position: absolute; /* Position text relative to the banner */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Fine-tune centering */
+  color: white; /* Make the text white */
+  font-size: 3em; /* Make the text large (adjust as needed) */
+  text-align: center; /* Center the text horizontally */
+  z-index: 1; /*Ensure the text is above the overlay*/
+}
 
 
 /* Buttons
